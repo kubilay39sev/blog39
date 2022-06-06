@@ -1,0 +1,15 @@
+{% extends "layout.html" %} {% block body %}
+
+<div class="jumbotron text-center">
+    <h3>Bloğumuza Hoş geldiniz keyifli okumalar. </h3>
+    <p>
+        Bu blog Günde ve şahsi içeriklidir
+    </p>
+</div>
+
+
+
+<p>
+    {% if request.user.is_authenticated %} Giriş Yapmak için adınızı girin = {{ request.user.username}} {% else %} Henüz bir giriş yapmamışsınız giriş yapınız lütfen {% endif %}
+</p>
+{% endblock body %}
